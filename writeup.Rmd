@@ -1,0 +1,32 @@
+---
+title: "Solar Panels in San Diego"
+author: "Page Piccinini"
+date: "9/19/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+load("environment.RData")
+library(tidyverse)
+```
+
+# Introduction
+
+This report looks at solar permits in San Diego. In 2016 there were a total of `r dim(solar_permits)[1]` solar permits issued.
+
+# Status
+
+Below is a plot of statuses of the permits.
+
+```{r Statuses}
+statuses_plot
+```
+
+# Location
+
+We can see where in San Diego these permits were issued by status.
+
+```{r Locations}
+locations_plot
+```
